@@ -1,19 +1,12 @@
 pipeline {
-    
-    agent none
-    
-   stages {
-        
-        stage('Build'){
-            
-            agent {
-                label "myslavemaven"
-            }
-          
-          steps {
-             
-                echo "my master branch"
-          }
-        }
-   }
+  agent none
+
+  stages {
+    stage('Demo Active Choices Parameter') {
+      steps {
+        echo "Tier Selected ${tier}"
+        echo "Services Selected ${services}"
+      }
+    }
+  }
 }
